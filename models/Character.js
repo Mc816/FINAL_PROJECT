@@ -1,18 +1,18 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+// const mongoose = require("mongoose");
+// const Schema = mongoose.Schema;
 
-const characterSchema = new Schema({
-  name: { type: String, required: true },
-  phrase: {
-    type: String,
-    unique: true,
-    trim: true,
-    lowercase: true,
-    required: true,
-  },
-  img: {
-    type: String,
-  },
-});
+// const CharacterSchema = new Schema({
+//   name: { type: String, required: true },
+//   phrase: {
+//     type: String,
+//     trim: true,
+//     lowercase: true,
+//     required: true,
+//   },
+//   imgUrl: {
+//     type: String,
+//   },
+//   owner: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+// });
 
-module.exports = mongoose.model("Character", characterSchema);
+// module.exports = mongoose.model("Character", CharacterSchema);

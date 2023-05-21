@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const charactersCtrl = require("../../controllers/api/characters");
+const charactersCtrl = require("../../controllers/api/Character");
 // require the authorization middleware function
 // const ensureLoggedIn = require("../../config/ensureLoggedIn");
 

@@ -21,9 +21,11 @@ app.use(express.static(path.join(__dirname, "build")));
 // Be sure to mount before routes
 //We know who is logged in now
 app.use(require("./config/checkToken"));
-
+app.use(express.urlencoded({ extended: false }));
 app.use(`/api/users`, require("./routes/api/users"));
+
 app.use(`/api/character`, require("./routes/api/Character"));
+
 app.get("/*", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
