@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getUser } from "./utilities/users-service";
 // pages
-import NewOrderPage from "./pages/NewOrder/NewOrderPage.js";
+import CharacterPage from "./pages/CharacterPage/CharacterPage.js";
 import AuthPage from "./pages/Auth/AuthPage.js";
 import OrderHistoryPage from "./pages/OrderHistory/OrderHistoryPage";
 // components
@@ -20,8 +20,8 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/orders/new" element={<NewOrderPage />} />
-            <Route path="/orders" element={<OrderHistoryPage />} />
+            <Route path="/orders/new" element={<OrderHistoryPage />} />
+            <Route path="/character" element={<CharacterPage />} />
           </Routes>
         </>
       ) : (
