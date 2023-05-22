@@ -5,7 +5,6 @@ const disneyCharCtrl = require("../../controllers/api/DisneyCharController");
 
 const router = express.Router();
 
-router.post(`/`, disneyCharCtrl.fetchDisneyChar);
+router.get(`/`, disneyCharCtrl.searchCharacters);
 
-router.get(`/`, disneyCharCtrl.fetchDisneyChar2);
 module.exports = router;

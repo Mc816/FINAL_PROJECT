@@ -1,62 +1,49 @@
-import { Component } from "react";
-import { signUp } from "../../utilities/users-service";
-import { searchCharacters } from "../../utilities/disney-api";
-export default class SignUpForm extends Component {
-  state = {
-    name: "",
-    phrase: "",
-  };
+import addCharacter from "../../utilities/character-api";
+import { useState } from "react";
+import CharacterList from "../CharacterList/CharacterList";
 
-  // The object passed to setState is merged with the current state object
-  handleChange = (evt) => {
-    this.setState({
-      [evt.target.name]: evt.target.value,
-      error: "",
-    });
-  };
+export default function CharacterForm() {
+  const [name, setName] = useState("");
+  const [phrase, setPhrase] = useState("");
+  const [charData, setCharData] = useState({});
 
-  handleSubmit = async (evt) => {
-    evt.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     try {
-      const addCharacter = { ...this.state };
-
-      const user = await searchCharacters(
-        addCharacter.name,
-        addCharacter.phrase
-      );
-    } catch {
-      // An error occurred
-      this.setState({ error: "Sign Up Failed - Try Again" });
+      const response = await addCharacter(name, phrase);
+      const data = await response.json();
+      console.log(data, "hiiiii");
+      setCharData(data.data);
+      setName("");
+      setPhrase("");
+    } catch (err) {
+      console.error(err);
     }
   };
-
-  render() {
-    return (
-      <div>
-        <div className="form-container">
-          <form autoComplete="off" onSubmit={this.handleSubmit}>
-            <label>Name</label>
-            <input
-              type="text"
-              name="name"
-              value={this.state.name}
-              onChange={this.handleChange}
-              required
-            />
-            <label>Phrase</label>
-            <input
-              type="phrase"
-              name="phrase"
-              value={this.state.email}
-              onChange={this.handleChange}
-              required
-            />
-
-            <button type="submit">Add</button>
-          </form>
+  return (
+    <div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>Name</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
         </div>
-        {/* <p className="error-message">&nbsp;{this.state.error}</p> */}
-      </div>
-    );
-  }
+        <div>
+          <label>Phrase</label>
+          <input
+            type="text"
+            value={phrase}
+            onChange={(e) => setPhrase(e.target.value)}
+          />
+        </div>
+
+        <button type="submit">Add A Character</button>
+      </form>
+      <CharacterList character={charData} />
+    </div>
+  );
 }

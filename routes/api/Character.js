@@ -1,18 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const charactersCtrl = require("../../controllers/api/Character");
-// require the authorization middleware function
-// const ensureLoggedIn = require("../../config/ensureLoggedIn");
+const characterController = require("../../controllers/api/Character");
 
-// POST /api/users
-router.post("/", charactersCtrl.create);
+router.post("/", characterController.createDisneyChar);
 
-// router.get("/new");
-
-// // POST /api/users/login
-// router.post("/login", usersCtrl.login);
-
-// // GET /api/users/check-token and Insert ensureLoggedIn on all routes that need protecting
-// router.get("/check-token", ensureLoggedIn, usersCtrl.checkToken);
-
+router.get("/", characterController.getAllDisenyChars);
 module.exports = router;

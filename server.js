@@ -25,7 +25,7 @@ app.use(require("./config/checkToken"));
 app.use(express.urlencoded({ extended: false }));
 app.use(`/api/users`, require("./routes/api/Users"));
 
-app.use(`/api/character`, require("./routes/api/Character"));
+app.use(`/api/Character`, require("./routes/api/Character"));
 
 app.use("/api/DisneyChar", require("./routes/api/DisneyChar"));
 
