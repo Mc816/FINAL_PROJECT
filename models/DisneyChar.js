@@ -12,7 +12,6 @@ const disneyCharSchema = new Schema({
   image: {
     type: String,
   },
-  movies: [{ type: String, required: true }],
 });
 
-module.exports = mongoose.model("DisneyChar", CharacterSchema);
+module.exports = mongoose.model("DisneyChar", disneyCharSchema);

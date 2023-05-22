@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { signUp } from "../../utilities/users-service";
-
+import { searchCharacters } from "../../utilities/disney-api";
 export default class SignUpForm extends Component {
   state = {
     name: "",
@@ -20,9 +20,10 @@ export default class SignUpForm extends Component {
     try {
       const addCharacter = { ...this.state };
 
-      const user = await signUp(addCharacter);
-
-      this.props.setUser(user);
+      const user = await searchCharacters(
+        addCharacter.name,
+        addCharacter.phrase
+      );
     } catch {
       // An error occurred
       this.setState({ error: "Sign Up Failed - Try Again" });

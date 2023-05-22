@@ -1,4 +1,5 @@
 import CharacterForm from "../../components/CharacterForm/CharacterForm";
+import Search2 from "../../components/Search/Search2";
 
 export default function CharacterPage() {
   return (
@@ -20,6 +21,7 @@ export default function CharacterPage() {
         </ul> */}
       </div>
       <CharacterForm />
+      <Search2 />
     </>
   );
 }
