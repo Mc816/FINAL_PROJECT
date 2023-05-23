@@ -13,7 +13,7 @@ export default function OrderHistoryPage() {
     <div>
       <h1>Order History Page</h1>
       <Search />
-      <DisneyCharList />
+      {/* <DisneyCharList /> */}
       {/* <DisneyCharDetails /> */}
       <button onClick={handleCheckToken}>Check When My Login Expires</button>
     </div>

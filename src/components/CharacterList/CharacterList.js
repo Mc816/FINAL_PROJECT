@@ -1,5 +1,5 @@
 const CharacterList = ({ character }) => {
-  //   console.log(character);
+  //   console.log(character, "bob");
   return (
     <div>
       <div key={character?._id}>

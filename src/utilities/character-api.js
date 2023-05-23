@@ -1,13 +1,5 @@
 const BASE_URL = "/api/Character";
 
-// export default function addCharacter(name, phrase) {
-//   return addCharacter(`${BASE_URL}`, "POST", {
-//     name: name,
-//     phrase: phrase,
-//     // image: image,
-//   });
-// }
-
 export default function addCharacter(name, phrase) {
   return fetch(BASE_URL, {
     method: "POST",
@@ -20,3 +12,11 @@ export default function addCharacter(name, phrase) {
     }),
   });
 }
+
+// export default function addCharacter(name, phrase) {
+//   return addCharacter(`${BASE_URL}`, "POST", {
+//     name: name,
+//     phrase: phrase,
+//     // image: image,
+//   });
+// }

@@ -9,6 +9,10 @@ const disneyCharSchema = new Schema({
     lowercase: true,
     required: true,
   },
+  film: {
+    type: String,
+  },
+  enemies: { type: String },
   image: {
     type: String,
   },
