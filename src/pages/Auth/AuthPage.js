@@ -3,10 +3,10 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 
 export default function AuthPage({ setUser }) {
   return (
-    <>
-      <h1>AuthPage</h1>
+    <div className="auth-container">
+      <h1>SIGN IN or SIGN UP</h1>
       <SignUpForm setUser={setUser} />
       <LoginForm setUser={setUser} />
-    </>
+    </div>
   );
 }

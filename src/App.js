@@ -1,12 +1,13 @@
 // imports
 import "./App.css";
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { getUser } from "./utilities/users-service";
+
 // pages
 import CharacterPage from "./pages/CharacterPage/CharacterPage.js";
 import AuthPage from "./pages/Auth/AuthPage.js";
-import OrderHistoryPage from "./pages/OrderHistory/OrderHistoryPage";
+import DisenySearchPage from "./pages/DisenySearchPage/DisenySearchPage";
 // components
 import NavBar from "./components/NavBar/NavBar";
 
@@ -20,8 +21,9 @@ function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Routes>
-            <Route path="/makeachar" element={<OrderHistoryPage />} />
+            <Route path="/makeachar" element={<DisenySearchPage />} />
             <Route path="/character" element={<CharacterPage />} />
+            <Route path="/*" element={<Navigate to="/makeachar" />} />
           </Routes>
         </>
       ) : (

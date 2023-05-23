@@ -19,16 +19,18 @@ export default function Search() {
   };
 
   return (
-    <div>
+    <div className="search-container">
       <input
         type="text"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={handleSearch} className="click">
+        Search
+      </button>
 
       <ul>
-        {searchedClicked && searchResults.length === 0 ? (
+        {searchedClicked && searchResults?.length === 0 ? (
           <p>{`Opps there is nothing to display :(, try another search`}</p>
         ) : (
           searchResults?.map?.((character) => (
@@ -43,6 +45,7 @@ export default function Search() {
   );
 }
 
+//Code I no longer need
 // {
 //   typeof searchResults === "object" && (
 //     <div>

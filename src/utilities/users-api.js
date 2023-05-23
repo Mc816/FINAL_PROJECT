@@ -13,15 +13,6 @@ export function login(credentials) {
 export function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
-// export function addCharacter(name, phrase, film, enemies, image) {
-//   return sendRequest(`${Character_URL}`, "POST", {
-//     name: name,
-//     phrase: phrase,
-//     film: film,
-//     enemies: enemies,
-//     image: image,
-//   });
-// }
 
 /*--- Helper Functions ---*/
 

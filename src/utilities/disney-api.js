@@ -1,13 +1,8 @@
-// import axios from "axios";
-// import { search } from "../../routes/api/Character";
-
-// const BASE_URL = "/api/DisneyChar";
-
 import axios from "axios";
-// import { search } from "../../routes/api/Character";
-
+//Defining base_url
 const BASE_URL = "https://api.disneyapi.dev";
 
+//exporting asynchronous function to search for param of name
 export const searchCharacters = async (searchResponse) => {
   try {
     const response = await axios.get(

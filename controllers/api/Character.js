@@ -7,20 +7,19 @@ const createDisneyChar = async (req, res) => {
 
     const disneyChar = new DisneyChar({ name, phrase, film, enemies });
     await disneyChar.save();
+    //Saving the object using the save method
     console.log(disneyChar);
-    // const data = await DisneyChar.create({
-    //   name: req.query.name,
-    //   phrase: req.query.phrase,
-    // });
+
     res.status(200).json({ message: "Created", data: disneyChar });
   } catch (err) {
     res.status(400).json({ error: "failed" });
   }
 };
 
+//Retriving the char from the database/mongodb
 const getAllDisenyChars = async (req, res) => {
   try {
-    const disneyChars = await DisneyChar.find();
+    const disneyChars = await DisneyChar.find({});
 
     res.status(200).json({ disneyChars });
   } catch (err) {
@@ -31,23 +30,3 @@ module.exports = {
   createDisneyChar,
   getAllDisenyChars,
 };
-
-// const Characters = require("../../models/Character");
-
-// module.exports = {
-//   create,
-// };
-
-// async function create(req, res) {
-//   try {
-//     // Add the user to the database
-//     // then()
-//     console.log(req.body);
-//     const user = await Characters.create(req.body);
-//     // token will be a string
-
-//     res.status(200);
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// }

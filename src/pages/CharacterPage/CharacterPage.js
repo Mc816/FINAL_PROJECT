@@ -6,11 +6,9 @@ export default function CharacterPage() {
   return (
     <>
       <div>
-        <h1>Your Disney Application</h1>
+        <h1>Create Your Own Diseny Character</h1>
       </div>
       <CharacterForm />
-
-      {/* <Search2 /> */}
     </>
   );
 }

@@ -28,7 +28,7 @@ export default function CharacterForm() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form2">
         <div>
           <label>Name</label>
           <input
@@ -54,7 +54,7 @@ export default function CharacterForm() {
           />
         </div>
         <div>
-          <label>enemies</label>
+          <label>Enemies</label>
           <input
             type="text"
             value={enemies}
@@ -62,7 +62,7 @@ export default function CharacterForm() {
           />
         </div>
 
-        <button type="submit">Add A Character</button>
+        <button type="submit">Create a Character</button>
       </form>
       <CharacterList character={charData} />
     </div>
