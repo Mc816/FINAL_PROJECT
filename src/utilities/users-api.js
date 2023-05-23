@@ -1,6 +1,6 @@
 import { getToken } from "./users-service";
 const BASE_URL = "/api/users";
-const Character_URL = "api/Characters";
+// const Character_URL = "api/Characters";
 
 export function signUp(userData) {
   return sendRequest(BASE_URL, "POST", userData);
@@ -13,12 +13,15 @@ export function login(credentials) {
 export function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
-export function addCharacter(name, phrase) {
-  return sendRequest(`${Character_URL}`, "POST", {
-    name: name,
-    phrase: phrase,
-  });
-}
+// export function addCharacter(name, phrase, film, enemies, image) {
+//   return sendRequest(`${Character_URL}`, "POST", {
+//     name: name,
+//     phrase: phrase,
+//     film: film,
+//     enemies: enemies,
+//     image: image,
+//   });
+// }
 
 /*--- Helper Functions ---*/
 

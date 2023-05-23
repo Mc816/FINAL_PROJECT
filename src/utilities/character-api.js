@@ -1,6 +1,6 @@
 const BASE_URL = "/api/Character";
 
-export default function addCharacter(name, phrase) {
+export default function addCharacter(name, phrase, film, enemies) {
   return fetch(BASE_URL, {
     method: "POST",
     headers: {
@@ -9,6 +9,8 @@ export default function addCharacter(name, phrase) {
     body: JSON.stringify({
       name: name,
       phrase: phrase,
+      film: film,
+      enemies: enemies,
     }),
   });
 }

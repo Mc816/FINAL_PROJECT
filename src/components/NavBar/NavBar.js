@@ -13,7 +13,7 @@ export default function NavBar({ user, setUser }) {
     <nav>
       <Link to="/character">Make a Disney Character</Link>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
+      <Link to="/makeachar">Search A Diseny Character</Link>
       <span>Welcome, {user.name}</span>
       <Link to="" onClick={handleLogOut}>
         Log Out

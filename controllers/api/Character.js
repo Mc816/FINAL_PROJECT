@@ -3,9 +3,9 @@ const DisneyChar = require("../../models/DisneyChar");
 //create
 const createDisneyChar = async (req, res) => {
   try {
-    const { name, phrase, image } = req.body;
+    const { name, phrase, film, enemies } = req.body;
 
-    const disneyChar = new DisneyChar({ name, phrase, image });
+    const disneyChar = new DisneyChar({ name, phrase, film, enemies });
     await disneyChar.save();
     console.log(disneyChar);
     // const data = await DisneyChar.create({
