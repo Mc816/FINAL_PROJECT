@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, "build")));
 //We know who is logged in now
 app.use(require("./config/checkToken"));
 app.use(express.urlencoded({ extended: false }));
-app.use(`/api/users`, require("./routes/api/Users"));
+app.use(`/api/Users`, require("./routes/api/Users"));
 
 app.use(`/api/Character`, require("./routes/api/Character"));
 
