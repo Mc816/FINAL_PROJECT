@@ -13,9 +13,6 @@ const disneyCharSchema = new Schema({
     type: String,
   },
   enemies: { type: String },
-  //   image: {
-  //     type: String,
-  //   },
 });
 
 module.exports = mongoose.model("DisneyChar", disneyCharSchema);

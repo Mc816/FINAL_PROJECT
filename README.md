@@ -4,6 +4,11 @@ This is a web application that features a user and Disney character model. The a
 
 The inspiration for this application came from my love for Disney and the desire to showcase it to the world.
 
+[Screenshot](./src/image/Screenshot%202023-05-23%20210743.png)
+[Screenshot](./src/image/Screenshot%202023-05-23%20210901.png)
+[Screenshot](./src/image/Screenshot%202023-05-23%20211019.png)
+[Screenshot](./src/image/Screenshot%202023-05-23%20211049.png)
+
 ## Technologies Used:
 
 To create this full MERN stack application, I utilized several technologies, including:
