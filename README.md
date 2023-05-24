@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Introduction:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web application that features a user and Disney character model. The application includes user sign-up, sign-in, and log-out features. Once signed in, users can create their own Disney character and search for characters using a third-party API.
 
-## Available Scripts
+The inspiration for this application came from my love for Disney and the desire to showcase it to the world.
 
-In the project directory, you can run:
+## Technologies Used:
 
-### `npm start`
+To create this full MERN stack application, I utilized several technologies, including:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Node.js
+React
+Express
+MongoDB/Mongoose
+React-Router-Dom
+Dotenv
+Axios
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I also utilized a third-party API, specifically https://api.disneyapi.dev/character, to fetch data for the search results.
 
-### `npm test`
+### Getting Started:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To understand how I planned the project, you can view the project outline on the [Trello Board](https://trello.com/b/J4X4j75a/finalproject).
 
-### `npm run build`
+To experience the live site and enjoy the web application, you can visit the [Disney Character Web Application](https://final-project-kt0s.onrender.com) to view it in your browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Unsolved Problems:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+One unresolved problem is that when the application refreshes, the information from MongoDB (which is still stored in the database) no longer renders properly. The same issue occurs with the third-party API data. However, users can create new characters despite this problem.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Future Enhancements:
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In the future, I plan to add more functionality to the application. Specifically, I would like to incorporate a favorites feature using CRUD operations, allowing users to save their favorite created characters or searched items.
